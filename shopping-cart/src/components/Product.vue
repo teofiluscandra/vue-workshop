@@ -14,14 +14,19 @@
                     <br>
                 </div>
                 <h5>{{price | rupiah}}</h5>
+                <AddToCart/>
             </div>
             </div>
         </div>
     </div>
 </template>
 <script>
+    import AddToCart from './AddToCart.vue' 
     export default {
         name : 'Product',
+        components : {
+            AddToCart
+        },
         props : {
             name : String,
             price : Number,
