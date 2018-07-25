@@ -13,7 +13,7 @@
                     {{desc}}
                     <br>
                 </div>
-                <h5>{{price}}</h5>
+                <h5>{{price | rupiah}}</h5>
             </div>
             </div>
         </div>
@@ -27,6 +27,9 @@
             price : Number,
             imageSrc : String,
             desc : String
+        },
+        filters : {
+            rupiah : num => `Rp. ${num}`
         }
     }
 </script>

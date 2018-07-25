@@ -4,10 +4,10 @@
       <NavBar />
       <div class="columns">
         <div class="column is-two-thirds">
-          <Product imageSrc="https://cdn-images-1.medium.com/max/1200/1*-PlqbnwqjqJi_EVmrhmuDQ.jpeg" name="Sepatu" price="12000" desc="Converse" />
+            <ProductList/>
         </div>
         <div class="column">
-          <h3>Shooping Cart</h3>
+          <h3>Shopping Cart</h3>
         </div>
       </div>
     </div>
@@ -16,13 +16,13 @@
 
 <script>
 import NavBar from './components/NavBar.vue'
-import Product from './components/Product.vue'
+import ProductList from './components/ProductList.vue'
 
 export default {
   name: 'app',
   components: {
     NavBar,
-    Product
+    ProductList
   }
 }
 </script>
