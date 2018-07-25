@@ -11,5 +11,8 @@
         <span aria-hidden="true"></span>
         </a>
     </div>
+    <div class="navbar-end">
+        <a href="#" class="navbar-item">Home</a>
+    </div>
     </nav>
 </template>
