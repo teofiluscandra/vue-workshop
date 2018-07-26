@@ -29,6 +29,17 @@ export const Store = new Vue({
             } else {
                 this.cart[index].quantity++
             }
+        }, 
+        removeFromCart(id) {
+            const index = this.cart.findIndex(item => {
+                return item.details.id === id
+            })
+            
+            if(this.cart[index].quantity <=1){
+                this.cart.splice(index,1)
+            } else {
+                this.cart[index].quantity--
+            }
         }
     }
 })

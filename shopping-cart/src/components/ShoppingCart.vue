@@ -5,6 +5,7 @@
                 <th>Item Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -12,6 +13,7 @@
                 <td>{{product.details.name}}</td>
                 <td>{{product.details.price | currency}}</td>
                 <td>{{product.quantity}}</td>
+                <td><button class="button is-danger is-small" @click="removeFromCart(product.details.id)">-</button></td>
             </tr>
         </tbody>
     </table>
@@ -20,10 +22,15 @@
     import {Store} from '../store/store'
 
     export default {
-        computed: {
+        computed : {
             cart(){
                 return Store.$data.cart
             }
         },
+        methods : {
+            removeFromCart(id){
+                Store.removeFromCart(id)
+            }
+        }
     }
 </script>

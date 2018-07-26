@@ -1,4 +1,6 @@
-# shopping-cart
+# Simple Shopping Cart with VueJS CLI 3 without Vuex
+
+This project is for workshop day 1 after student learn about vuejs fundamental and can make a project with html single file (folder html-single-file)
 
 ## Project setup
 ```

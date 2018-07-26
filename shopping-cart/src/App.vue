@@ -7,7 +7,7 @@
             <ProductList/>
         </div>
         <div class="column">
-          <h3>Shopping Cart</h3>
+          <h3 class="title is-4">Shopping Cart</h3>
           <ShoppingCart />
           <h3>Total : {{total | currency}}</h3>
         </div>
