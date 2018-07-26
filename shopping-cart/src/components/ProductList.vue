@@ -3,13 +3,13 @@
         <h3>Our Products</h3>
         <div class="columns">
             <div :key="product.id" v-for="product in products" class="column">
-                <Product :imageSrc="product.imageSrc" :name="product.name" :price=product.price :desc="product.desc" />
+                <Product :product="product" />
             </div>
         </div>
     </div>
 </template>
 <script>
-    import data from '../api/products.js'
+    import {Store} from '../store/store'
     import Product from './Product.vue'
     export default {
         name : 'ProductList',
@@ -18,7 +18,7 @@
         },
         data : function() {
             return {
-                products : data
+                products : Store.$data.products
             }
         },
     }

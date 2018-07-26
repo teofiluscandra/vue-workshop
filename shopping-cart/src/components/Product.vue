@@ -2,19 +2,20 @@
     <div class="card">
         <div class="card-image">
             <figure class="image is-4by3">
-            <img :src="imageSrc" alt="Placeholder image">
+            <img :src="product.imageSrc" alt="Placeholder image">
             </figure>
         </div>
         <div class="card-content">
             <div class="media">
             <div class="media-content">
-                <p class="title is-4">{{name}}</p>
+                <p class="title is-4">{{product.name}}</p>
                 <div class="content">
-                    {{desc}}
+                    {{product.desc}}
                     <br>
                 </div>
-                <h5>{{price | rupiah}}</h5>
-                <AddToCart/>
+                <h5>{{product.price | rupiah}}</h5>
+                <!-- <AddToCart/> -->
+                <button class="button is-primary" @click="addToCart(product)">Add To Cart</button>  
             </div>
             </div>
         </div>
@@ -22,19 +23,22 @@
 </template>
 <script>
     import AddToCart from './AddToCart.vue' 
+    import {Store} from '../store/store'
     export default {
         name : 'Product',
         components : {
             AddToCart
         },
         props : {
-            name : String,
-            price : Number,
-            imageSrc : String,
-            desc : String
+            product : Object
         },
         filters : {
             rupiah : num => `Rp. ${num}`
+        },
+        methods : {
+            addToCart(product){
+                Store.addToCart(product)
+            }
         }
     }
 </script>

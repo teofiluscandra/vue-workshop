@@ -8,6 +8,8 @@
         </div>
         <div class="column">
           <h3>Shopping Cart</h3>
+          <ShoppingCart />
+          <h3>Total : {{total | currency}}</h3>
         </div>
       </div>
     </div>
@@ -17,12 +19,20 @@
 <script>
 import NavBar from './components/NavBar.vue'
 import ProductList from './components/ProductList.vue'
+import ShoppingCart from './components/ShoppingCart.vue'
+import {Store} from './store/store'
 
 export default {
   name: 'app',
   components: {
     NavBar,
-    ProductList
+    ProductList,
+    ShoppingCart
+  },
+  computed: {
+    total(){
+      return Store.total
+    }
   }
 }
 </script>
