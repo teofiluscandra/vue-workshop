@@ -4,6 +4,7 @@ This project is for workshop day 1 after student learn about vuejs fundamental a
 
 ## Demo
 
+![alt text](https://github.com/teofiluscandra/vue-workshop/blob/master/shopping-cart/screenshot/screenshot1.png?raw=true)
 
 ## Project setup
 ```
